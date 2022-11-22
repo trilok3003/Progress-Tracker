@@ -1,0 +1,12 @@
+<ul>
+  <li
+    [ngClass]="{
+      completed: activeStep === i + 1 || activeStep > i + 1,
+      active: activeStep === i
+    }"
+    *ngFor="let step of steps; let i = index"
+    (click)="activeStep = i + 1"
+  >
+    <span>{{ step }}</span>
+  </li>
+</ul>
